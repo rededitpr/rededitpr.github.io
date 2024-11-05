@@ -3,138 +3,141 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rededit Paraná</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
 
-        body {
-            margin: 0;
-            color: rgb(165, 40, 40);
-            font-family: Poppins, sans-serif;
-            touch-action: pan-y
-        }
+    body {
+        margin: 0;
+        color: rgb(165, 40, 40);
+        font-family: Poppins, sans-serif;
+        touch-action: pan-y;
+    }
 
+    header {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-weight: 1000;
+        text-shadow: white 0 0 2px;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 70px;
+        color: white;
+        background-clip: content-box;
+        background-color: rgb(165, 40, 40);
+    }
+
+    h1 {
+        margin-bottom: -10px;
+    }
+
+    p {
+        margin-top: 0;
+        margin-left: 11px;
+        letter-spacing: 11px;
+    }
+
+    main {
+        margin: 0 35px;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    h3 {
+        font-size: 18.6667px;
+    }
+
+    #r {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .i {
+        font-family: Poppins, sans-serif;
+        padding: 18.5px 14px;
+        font-size: 18.6667px;
+        border-radius: 5px;
+        border: 1px solid rgb(143, 143, 143);
+    }
+
+    .i:focus {
+        outline: red 2px solid;
+    }
+
+    textarea.i {
+        font-size: 16px;
+        height: 632px;
+        text-wrap: wrap;
+        white-space-collapse: preserve;
+        overflow-wrap: break-word;
+        line-height: 24px;
+        margin: 10px 10px 10px 0;
+    }
+
+    button {
+        align-items: flex-start;
+        height: min-content;
+        padding: 5px 8px;
+        text-transform: uppercase;
+        background-color: #a52828;
+        color: white;
+        border-color: rgb(83, 18, 18);
+        border-radius: 5px;
+        font-size: large;
+        font-family: Poppins, sans-serif;
+        transition: color .25s ease-out;
+    }
+
+    button:active {
+        background-color: white;
+        color: rgb(83, 18, 18);
+    }
+
+    [s] {
+        display: none;
+    }
+
+    /* Mobile-specific adjustments */
+    @media screen and (max-width: 600px) {
         header {
-            position: fixed;
-            display: flex;
-            flex-direction: column;
-            text-transform: uppercase;
-            font-weight: 1000;
-            text-shadow: white 0 0 2px;
-            align-items: center;
-            justify-content: center;
-            width: 100vw;
-            height: 70px;
-            color: white;
-            background-clip: content-box;
-            background-color: rgb(165, 40, 40)
+            height: 90px;
         }
 
         h1 {
-            margin-bottom: -10px
+            font-size: 30px;
         }
 
         p {
-            margin-top: 0;
-            margin-left: 11px;
-            letter-spacing: 11px
+            font-size: 18px;
         }
 
         main {
-            margin: 0 35px;
-            padding-top: 100px;
-            display: flex;
-            flex-direction: column
-        }
-
-        h3 {
-            font-size: 18.6667px
-        }
-
-        #r {
-            display: flex;
-            align-items: center;
-            justify-content: space-between
+            padding-top: 120px;
         }
 
         .i {
-            font-family: Poppins, sans-serif;
-            padding: 18.5px 14px;
-            font-size: 18.6667px;
-            border-radius: 5px;
-            border: 1px solid rgb(143, 143, 143)
-        }
-
-        .i:focus {
-            outline: red 2px solid
+            font-size: 20px;
+            padding: 14px;
         }
 
         textarea.i {
-            font-size: 16px;
-            height: 632px;
-            text-wrap: wrap;
-            white-space-collapse: preserve;
-            overflow-wrap: break-word;
-            line-height: 24px;
-            margin: 10px 10px 10px 0
+            font-size: 14px;
+            height: 400px;
         }
 
         button {
-            align-items: flex-start;
-            height: min-content;
-            padding: 5px 8px;
-            text-transform: uppercase;
-            background-color: #a52828;
-            color: white;
-            border-color: rgb(83, 18, 18);
-            border-radius: 5px;
-            font-size: large;
-            font-family: Poppins, sans-serif;
-            transition: color .25s ease-out
+            border-radius: 8px;
+            font-size: 18px;
         }
+    }
+</style>
 
-        button:active {
-            background-color: white;
-            color: rgb(83, 18, 18)
-        }
-
-        [s] {
-            display: none
-        }
-
-        @media screen and (max-width:1000px) {
-            header {
-                height: 120px
-            }
-
-            h1 {
-                font-size: 50px
-            }
-
-            p {
-                font-size: 25px
-            }
-
-            main {
-                padding-top: 150px
-            }
-
-            .i {
-                font-size: 35px
-            }
-
-            textarea.i {
-                font-size: 15px;
-                height: 1200px
-            }
-
-            button {
-                border-radius: 12px;
-                font-size: 35px
-            }
-        }
-    </style>
 </head>
 
 <body>
